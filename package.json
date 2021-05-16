@@ -1,0 +1,27 @@
+{
+  "name": "nodemailer-express-for-cleaning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tartios/nodemailer-express-for-cleaning.git"
+  },
+  "author": "Tartios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tartios/nodemailer-express-for-cleaning/issues"
+  },
+  "homepage": "https://github.com/Tartios/nodemailer-express-for-cleaning#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
