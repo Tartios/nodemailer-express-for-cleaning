@@ -1,12 +1,19 @@
 const nodemailer = require('nodemailer');
 const creds = require('./config');
 const transport = {
-    host: 'smtp.yandex.ru',
-    port: 465,
-    sequre: true,
+    // host: 'smtp.yandex.ru',
+    // port: 465,
+    // sequre: true,
+    // auth: {
+    //     user: creds.USER,
+    //     password: creds.PASSWORD
+    // },
+    host: 'smtp.ethereal.email',
+    port: 587,
+    secure: false,
     auth: {
-        user: creds.USER,
-        password: creds.PASSWORD
+        user: 'victor.funk@ethereal.email',
+        password: '2ZTtJS6EGzM58QJr2j'
     },
 }
 const transporter = nodemailer.createTransport(transport);
@@ -17,16 +24,12 @@ const transporter = nodemailer.createTransport(transport);
 //     }
 //     console.log('Server is ready to take messages');
 // });
-const postPush = () => {
-    transporter.sendMail(mail, (err, data) => {
+const postPush = mail => {
+    transporter.sendMail(mail, (err, callback) => {
         if (err) {
-            res.json({
-                status: 'fail',
-            })
+            return console.log(err);
         }
-        res.json({
-            status: 'ok',
-        })
+        console.log(callback);
     })
 }
 
